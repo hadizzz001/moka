@@ -80,7 +80,7 @@ export default function Home({ data: staticData, category }: { category: any, da
         <meta property="og:title" content="Moka Coffee Store | Buy tasty coffee in Lebanon" />
         <meta property="og:url" content="https://binmoka.com/" />
         <meta property="og:site_name" content="Moka Coffee Store" />
-        <meta property="og:image" content="https://ucarecdn.com/7a7d64a9-6cb4-4cd2-b363-25b71a94ec3b/icon.jpg" />
+        <meta property="og:image" content="https://res.cloudinary.com/dtilcqpqn/image/upload/v1740830051/vkpejp5cg3gxqi6kgnb8.png" />
         {/* <meta property="og:description" content="Moka Coffee provide a wide range of European electronics (stock and new)" /> */}
 
         <meta name="og:description" content={`
