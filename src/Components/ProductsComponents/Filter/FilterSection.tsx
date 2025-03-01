@@ -23,53 +23,7 @@ const FilterSection = ({handleReset,sx,setProducts}:any) => {
         ]
     }
     return (
-        <Box
-            sx={{
-            width: {
-                xs: '100%',
-                md: '20%'
-            },
-            background: 'white',
-            maxWidth: {
-                md: '300px'
-            },
-            flexDirection: 'column',
-            height: {
-                md: '100vh'
-            },
-            display: 'flex',
-            ...sx,
-           
-        }}>
-           <Typography sx={{py:'.5em',fontWeight:'600',fontSize:'1.2em'}}>Filter By</Typography>
-         
-          
-           <Box className="flexed" sx={{position:'relative',mt:1,width:'100%'}}>
-
-<TextField
-onChange={(e)=>{console.log(e.target.value)}}
-size='small' placeholder='Search By Name' sx={{width:'100%'}}/>
-<SearchOutlinedIcon sx={{
-
-position: 'absolute',
-right: '2%',
-}}/>
-</Box>
-                <FilterAccordion
-                options={options}
-                setOptions={setOptions}
-                />
-                <Box sx={{pt:'1.5em',display:'flex',gap:'.5em'}}>
-                <Btn
-                onClick={()=>handleSubmit()}
-                v2={true} sx={{':hover':{background:'transparent'},margin:0}} >Confirm</Btn>
-                <Btn
-                
-                onClick={()=>handleReset()}
-                
-                 v2={true} sx={{margin:0,border:'none',color:'red'}}>Reset</Btn>
-                </Box>
-        </Box>
+      <></>
     )
 }
 

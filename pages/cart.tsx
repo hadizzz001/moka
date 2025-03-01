@@ -188,9 +188,9 @@ const Index = () => {
     return ( <>
      <Head>
 
-     <title>Moka Coffee | Cart</title>
+     <title>Oxinab | Cart</title>
         <meta name="description" content={`
-        Moka Coffee is a premium coffee brand dedicated to delivering rich, aromatic, and high-quality coffee experiences.
+        Oxinab specializing in providing high-quality medical supplies and healthcare solutions.
         `} />
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         {/* <link rel="icon" href="/favicon.ico"/> */}

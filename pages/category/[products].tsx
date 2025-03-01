@@ -73,7 +73,7 @@ const Index = ({data,count}:any) => {
   return (
     <>
     <Head>
-    <title>Powerhouse lb Electronics | Shop By Category </title>
+    <title>Moka Coffee | Shop By Category </title>
         <meta name="robots" content="index,follow"/>
 {/* <meta name="description" content="Moka Coffee provide a wide range of European electronics (stock and new)" /> */}
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
@@ -95,8 +95,8 @@ const Index = ({data,count}:any) => {
 {/* <meta property="og:description" content="Moka Coffee provide a wide range of European electronics (stock and new)" /> */}
      
 <meta name="og:description" content={`
-        Shop different ${router?.query?.products} from Powerhouse-lb for the best european house appliances. We deliver anywhere in lebanon | Best online shop in lebanon.`} />
-       <meta name="description" content={` Shop different ${router?.query?.products} from Powerhouse-lb for the best european house appliances. We deliver anywhere in lebanon | Best online shop in lebanon.`} />
+        Shop different ${router?.query?.products} from Moka Coffee is a premium coffee brand dedicated to delivering rich, aromatic, and high-quality coffee experiences.`} />
+       <meta name="description" content={` Shop different ${router?.query?.products} from Moka Coffee is a premium coffee brand dedicated to delivering rich, aromatic, and high-quality coffee experiences.`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 
     </Head>
@@ -120,8 +120,8 @@ const Index = ({data,count}:any) => {
     ,flexDirection:'row'}}>
 
     <Accordion sx={{display:{md:'none'},width:'100%'}}>
-    <AccordionSummary>
-        Open Filter
+    <AccordionSummary style={{display:'none'}}>
+        
     </AccordionSummary>
     <AccordionDetails>
 

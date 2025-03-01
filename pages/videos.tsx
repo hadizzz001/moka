@@ -54,7 +54,7 @@ const Index = () => {
 {/* <meta property="og:description" content="Moka Coffee provide a wide range of European electronics (stock and new)" /> */}
      
 <meta name="og:description" content={`
-       View different Videos from Powerhouse-lb for the best european house appliances. We deliver anywhere in lebanon | Best online shop in lebanon.`} />
+       Moka Coffee is a premium coffee brand dedicated to delivering rich, aromatic, and high-quality coffee experiences.`} />
        <meta name="description" content={` View different Videos from Powerhouse-lb for the best european house appliances. We deliver anywhere in lebanon | Best online shop in lebanon.`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 

@@ -17,7 +17,7 @@ const Footer = () => (
             </Link>
           </div>
           <Typography component='h1' sx={{ fontSize: '.9em' }} className='footer-p white'>
-            We are Moka Coffee Store european electronics supplier based in Lebanon, we sell various products of any house product you can think of, we deliver to all lebanon
+            Moka Coffee is a premium coffee brand dedicated to delivering rich, aromatic, and high-quality coffee experiences.
           </Typography>
           {/* <ul className="site-footer__social-networks">
           <li><a href="https://www.facebook.com/profile.php?id=100063581229923" rel="noreferrer" target='_blank'><i className="icon-facebook"></i></a></li>
@@ -40,20 +40,16 @@ const Footer = () => (
 
           <ul className='ul-white' style={{ color: 'white', background: 'black' }}>
             <li className='link-title'>Contact</li>
-            <li><a href="#"> Lebanon/Beirut Online</a></li>
+            <li><a href="#"> Lebanon/Beirut</a></li>
 
             <li>
-              <a href="https://www.facebook.com/online.european.outlet/" target="_blank" rel="noreferrer" >
+              <a href="https://www.facebook.com/profile.php?id=61560890102042" target="_blank" rel="noreferrer" >
                 <img className='img' src='https://ucarecdn.com/d77856af-ef62-40fd-97c5-60bbb0cb0098/fb.png' style={{ width: 20}}/> Facebook</a>
             </li>
 
-            <li><a href="https://instagram.com/power_house_european" target="_blank" rel="noreferrer" >
+            <li><a href="https://www.instagram.com/cafe.moka2025" target="_blank" rel="noreferrer" >
             <img className='img' src='https://ucarecdn.com/114fe16a-c2f7-49c6-90ed-cc30336768f8/insta.png' style={{ width: 20}}/> Instagram</a>
-            </li>
-
-            <li><a href="https://www.tiktok.com/@powerhouse37" target="_blank" rel="noreferrer" >
-            <img className='img' src='https://ucarecdn.com/5a775d30-1cf9-44f1-bc68-7df730c40b1a/tiktok.png' style={{ width: 20}}/> Tiktok</a>
-            </li>
+            </li> 
 
             <li><a href={'https://wa.me/71566680'} rel="noreferrer" target='_blank' >
             <img className='img' src='https://ucarecdn.com/678f97e4-123b-44e8-89b0-5adc4f738898/wa.png' style={{ width: 20}}/>{` +961 71 566 680`}

@@ -59,7 +59,7 @@ const Perks = () => {
                             alignItems: 'center',
                             justifyContent: 'center'
                         }}>
-                        {<a className='white' target={`_blank`} rel='noreferrer' style={{textDecoration:"none"}} href={"https://instagram.com/power_house_european"}>
+                        {<a className='white' target={`_blank`} rel='noreferrer' style={{textDecoration:"none"}} href={"https://www.instagram.com/cafe.moka2025"}>
 
 
                             <Typography
@@ -74,38 +74,7 @@ const Perks = () => {
                 </Box>
 
 
-                <Box
-
-sx={{
-    display: 'flex',
-    gap: '.5em',
-    flexDirection: 'row'
-}}>
-<Box className='flexed' sx={{width:'30px',color:'white',filter:'invert(1)'}}>
-    {/* <MusicNoteIcon sx={{ color: '#fff' }} />
-     */}
-     <img src="https://cdn-icons-png.flaticon.com/512/1946/1946552.png" alt="" className="img" />
-</Box>
-<Box
-    sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'column'
-    }}>
-    {<a className='white' target={`_blank`} style={{textDecoration:"none"}} rel='noreferrer' href={"https://www.tiktok.com/@powerhouse37"}>
-
-
-        <Typography
-            sx={{
-                fontSize: '1.1em'
-            }}>TikTok</Typography>
-    </a>
-
-    }
-</Box>
-
-</Box>
+ 
 
 
                 <Box
@@ -125,7 +94,7 @@ sx={{
                             justifyContent: 'center',
                             flexDirection: 'column'
                         }}>
-                        {<a className='white' target={`_blank`} style={{textDecoration:"none"}} rel='noreferrer' href={"https://www.facebook.com/online.european.outlet/"}>
+                        {<a className='white' target={`_blank`} style={{textDecoration:"none"}} rel='noreferrer' href={"https://www.facebook.com/profile.php?id=61560890102042"}>
 
 
                             <Typography
