@@ -102,17 +102,17 @@ export default function Home({ data: staticData, category }: { category: any, da
         {/* <CategoryImages/> */}
         <WhatsApp />
         <ProductCollection
-          data={data && data.filter(item => item.category === 'Coffee')}
+          data={data && data.filter((item:any) => item.category === 'Coffee')}
           setQuickView={setQuickView}
           Collectiontitle='Coffee Category'
         />
         <ProductCollection
-          data={data && data.filter(item => item.category === 'Coffee machine')}
+          data={data && data.filter((item:any) => item.category === 'Coffee machine')}
           setQuickView={setQuickView}
           Collectiontitle='Coffee machine'
         />
         <ProductCollection
-          data={data && data.filter(item => item.category === 'espresso pod')}
+          data={data && data.filter((item:any) => item.category === 'espresso pod')}
           setQuickView={setQuickView}
           Collectiontitle='Espresso pod'
         />
