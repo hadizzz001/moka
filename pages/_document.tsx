@@ -11,7 +11,7 @@ export default function Document() {
                 <link
                     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap"
                     rel="stylesheet"/>
-        <link rel="icon" href="https://res.cloudinary.com/dtilcqpqn/image/upload/v1740830051/vkpejp5cg3gxqi6kgnb8.png" />
+        <link rel="icon" href="https://res.cloudinary.com/dtilcqpqn/image/upload/v1741088776/jlnajjbmntdrvp1tfat9.png" />
 
 
         

@@ -35,7 +35,7 @@ const ProductCollection = ({sx,enableVideo,Collectiontitle,data,setQuickView} : 
             <Box
                 sx={{ 
                 padding: '.5em',
-                fontSize: '1.75em',
+                fontSize: '2em',
                 fontWeight: '500'
             }}>{Collectiontitle}</Box>
             {/* <Box
@@ -84,7 +84,7 @@ const ProductCollection = ({sx,enableVideo,Collectiontitle,data,setQuickView} : 
 
             <Btn v2={true}
 
-                sx={{border:'none',fontSize:'11px',margin:'2em auto',':hover':{background:'white'}}}>View All</Btn>
+                sx={{border:'none',fontSize:'14px',margin:'2em auto',':hover':{background:'white'}}}>View All</Btn>
                 </Link>
         
                 </Box>

@@ -1,6 +1,6 @@
-import {Box, IconButton, Tooltip, Typography} from '@mui/material'
-import {useEffect, useState} from 'react'
-import {useRef} from 'react'
+import { Box, IconButton, Tooltip, Typography } from '@mui/material'
+import { useEffect, useState } from 'react'
+import { useRef } from 'react'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -12,24 +12,24 @@ import useCart from '../../../Hooks/useCart';
 import Btn from '../../Btn/Btn';
 import ReactPlayer from 'react-player/lazy';
 const defaultImages = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQTvTcD234f-GRtvhN-xdfrqckgfNZbgS6fRdIeAQ-vBdHlkvqjmM6MZQfmFBHpjxoc1Q&usqp=CAU']
-const ProductCard = ({title,videoUrl,_id,price,images,category,sx, handleQuickView,className} : {
+const ProductCard = ({ title, videoUrl, _id, price, images, category, sx, handleQuickView, className }: {
     className?: string,
-    handleQuickView ?: (id: string)=> void;
+    handleQuickView?: (id: string) => void;
     sx?: any,
     title: string;
     price: number;
     _id: string;
-    videoUrl ?: string;
+    videoUrl?: string;
     images: string[] | any[];
     category: string;
 }) => {
     let img = images?.length > 0 ? images[0] : defaultImages
-    const ref : any = useRef()
-    const {addToCart}= useCart()    
+    const ref: any = useRef()
+    const { addToCart } = useCart()
     const [currentImg,
         setCurrentImg] = useState(img)
-    const [playing,setPlay] = useState(false)
-        const router = useRouter()
+    const [playing, setPlay] = useState(false)
+    const router = useRouter()
     const handleonMouseIn = () => {
         if (ref
             ?.current && images?.length > 1) {
@@ -43,95 +43,95 @@ const ProductCard = ({title,videoUrl,_id,price,images,category,sx, handleQuickVi
         }
     }
     const handleClick = () => {
-        router.push(`/product/${_id}?title=${`${title}`.substring(0,100).replace(/\s+/g, '-')}&category=${category ? category : 'products'}`)
-        
+        router.push(`/product/${_id}?title=${`${title}`.substring(0, 100).replace(/\s+/g, '-')}&category=${category ? category : 'products'}`)
+
     }
     const [hasWindow, setHasWindow] = useState(false);
     useEffect(() => {
         if (typeof window !== "undefined") {
-          setHasWindow(true);
+            setHasWindow(true);
         }
-      }, []);
+    }, []);
     return (
         <Box
-        // onClick={()=>router.push('/product/product-name')}
+            // onClick={()=>router.push('/product/product-name')}
             onMouseOver={() => handleonMouseIn()}
             onMouseOut={() => handleonMouseOut()}
             sx={{
-                boxShadow:'1px 1px 3px #eeeeee',
-            position: 'relative',
-            minHeight: {lg:"440px", xs:"350px"},
-            maxHeight: {lg:"640px", xs:"200px"},
-            maxWidth:{lg:"500px", xs:"300px"},
-            width: '100%',
-            overflow: 'hidden', 
-            ...sx,
-            ':hover': {
-                '& .productOptions': {
-                    display: 'flex'
+                boxShadow: '1px 1px 3px #eeeeee',
+                position: 'relative',
+                minHeight: { lg: "440px", xs: "350px" },
+                maxHeight: { lg: "640px", xs: "200px" },
+                maxWidth: { lg: "500px", xs: "300px" },
+                width: '100%',
+                overflow: 'hidden',
+                ...sx,
+                ':hover': {
+                    '& .productOptions': {
+                        display: 'flex'
+                    }
                 }
-            }
-        }}>
+            }}>
             {/* <Link
                 style={{
                 position: 'relative'
             }}
                 className='link scale'
                 href='/'> */}
-                <Box
-                    sx={{
+            <Box
+                sx={{
                     position: 'relative',
 
                 }}>
-                {videoUrl &&    <Box
-                        onClick={()=>setPlay(!playing)}
-                        sx={{
-                      
-                        zIndex:515125,
+                {videoUrl && <Box
+                    onClick={() => setPlay(!playing)}
+                    sx={{
+
+                        zIndex: 515125,
                         right: '50%',
-                        bottom : '5%',
+                        bottom: '5%',
                         transform: {
                             sm: 'translateY(50%)'
                         },
-                        cursor:'pointer',
-                        backgroundColor:'transparent',
-                        display: 
-                             'flex',
+                        cursor: 'pointer',
+                        backgroundColor: 'transparent',
+                        display:
+                            'flex',
                         flexDirection: 'column',
                         position: 'absolute',
                         gap: '.15em'
                     }}>
-                            <PlayCircleOutlineIcon fontSize='large'/>
-                    </Box>}
-                <Box sx={{height:{lg:"350px", xs:"200px"}}}>
-                 {!videoUrl ?   <img
-                 
-                    onClick={handleClick}
-                    style={{maxHeight:'400px'}}
-                    ref={ref} src={currentImg} className='img contain pointer' alt="Product Image"/>
-                :
-               (hasWindow && <Box sx={{ width: { xs: '100%', sm: '500px' } }}>
+                    <PlayCircleOutlineIcon fontSize='large' />
+                </Box>}
+                <Box sx={{ height: { lg: "350px", xs: "200px" } }}>
+                    {!videoUrl ? <img
 
-                <ReactPlayer
-                controls
-                  onClick={handleClick}
-                fallback={<img
-                    onClick={handleClick}
-                    style={{maxHeight:'400px'}}
-                    ref={ref} src={currentImg} className='img contain pointer' alt="Product Image"/>}
-                loop
-                height={'auto !important'}
-                width={'100%'} style={{
-                    width: '100%',
-                    height:'auto !important'
-                }}   playing={playing} muted  url={`${videoUrl}`} />
+                        onClick={handleClick}
+                        style={{ maxHeight: '400px' }}
+                        ref={ref} src={currentImg} className='img contain pointer' alt="Product Image" />
+                        :
+                        (hasWindow && <Box sx={{ width: { xs: '100%', sm: '500px' } }}>
 
-            </Box>)
-                }
-                    </Box>
-                    <Box
-                        className='productOptions'
-                        sx={{
+                            <ReactPlayer
+                                controls
+                                onClick={handleClick}
+                                fallback={<img
+                                    onClick={handleClick}
+                                    style={{ maxHeight: '400px' }}
+                                    ref={ref} src={currentImg} className='img contain pointer' alt="Product Image" />}
+                                loop
+                                height={'auto !important'}
+                                width={'100%'} style={{
+                                    width: '100%',
+                                    height: 'auto !important'
+                                }} playing={playing} muted url={`${videoUrl}`} />
+
+                        </Box>)
+                    }
+                </Box>
+                <Box
+                    className='productOptions'
+                    sx={{
                         bottom: {
                             xs: '85%',
                             sm: '50%'
@@ -140,7 +140,7 @@ const ProductCard = ({title,videoUrl,_id,price,images,category,sx, handleQuickVi
                         transform: {
                             sm: 'translateY(50%)'
                         },
-                        
+
                         display: {
                             xs: 'flex',
                             sm: ' none'
@@ -149,10 +149,10 @@ const ProductCard = ({title,videoUrl,_id,price,images,category,sx, handleQuickVi
                         position: 'absolute',
                         gap: '.15em'
                     }}>
-                        <Tooltip placement='left' title={'Quick View'}>
-                            <IconButton
-                                onClick={()=>handleQuickView && _id ? handleQuickView(`${_id}`) : ''}
-                                sx={{
+                    <Tooltip placement='left' title={'Quick View'}>
+                        <IconButton
+                            onClick={() => handleQuickView && _id ? handleQuickView(`${_id}`) : ''}
+                            sx={{
                                 ':hover': {
                                     background: 'white'
                                 },
@@ -165,13 +165,13 @@ const ProductCard = ({title,videoUrl,_id,price,images,category,sx, handleQuickVi
                                 boxShadow: '1px 1px 3px grey'
 
                             }}>
-                                <RemoveRedEyeIcon fontSize={'small'}/>
-                            </IconButton>
-                        </Tooltip>
+                            <RemoveRedEyeIcon fontSize={'small'} />
+                        </IconButton>
+                    </Tooltip>
 
-                        <Tooltip placement='left' title={'Add To Favourites'}>
-                            <IconButton
-                                sx={{
+                    <Tooltip placement='left' title={'Add To Favourites'}>
+                        <IconButton
+                            sx={{
                                 ':hover': {
                                     background: 'white'
                                 },
@@ -179,53 +179,51 @@ const ProductCard = ({title,videoUrl,_id,price,images,category,sx, handleQuickVi
                                 color: '#333',
                                 boxShadow: '1px 1px 3px grey'
                             }}>
-                                <FavoriteBorderIcon fontSize={'small'}/>
-                            </IconButton>
-                        </Tooltip>
+                            <FavoriteBorderIcon fontSize={'small'} />
+                        </IconButton>
+                    </Tooltip>
 
-                    </Box>
                 </Box>
-                
-                <Typography
+            </Box>
+
+            <Typography
                 className='titleMax'
-                onClick={()=>handleClick()}
-                    sx={{
-                    cursor:'pointer',
+                onClick={() => handleClick()}
+                sx={{
+                    cursor: 'pointer',
                     pt: '.25em',
-              
-                    width:'100%',
+
+                    width: '100%',
                     // wordBreak:'break-all',
                     mt: '.25em',
-                    fontSize: {lg:'1em',xs:'.5em'}
+                    fontSize: { lg: '1.5em', xs: '1em' }
                 }}>{title}</Typography>
 
-                <span className='gray' style={{fontSize:'.76em'}}>
-                    {category}
-                    </span>
-            <Box sx={{mx:'.15em',justifyContent:'space-between',display:{xs:'block'} }} className='flexed'>
+            <span className='gray' style={{ fontSize: '1em' }}>
+                {category}
+            </span>
+            <Box sx={{ mx: '.15em', justifyContent: 'space-between', display: { xs: 'block' } }} className='flexed'>
                 <Typography
                     className='clr'
                     sx={{
-                    fontSize: {lg:'1em',xs:'.5em'}
-                }}>${price}</Typography>
-                {/* boxShadow:'1px 1px 3px #0000005e', */}
-                {/* <IconButton
-                onClick={()=>addToCart(_id,{price,img,title,_id})}
-                sx={{':hover':{background:'#eaeaea'}}}>
-                    <ShoppingCartIcon />
-                </IconButton> */}
+                        fontSize: { lg: '1.5em', xs: '1em' }
+                    }}>${price}</Typography>
+                
+            </Box>
+            <Box  >
+               
                 <Tooltip title='Add To Cart' placement='left'>
-                <Btn
-                v2={true}
-                onClick={()=>addToCart(_id,{price,img,title,_id})}
-                sx={{':hover':{background:'#935525',color:'white',border:'1px solid #935525'}}}>
-                       <Typography
-                   className='flex items-center'
-                   sx={{fontSize:'.5em',gap:'.3em' }}>
+                    <Btn
+                        v2={true}
+                        onClick={() => addToCart(_id, { price, img, title, _id })}
+                        sx={{ ':hover': { background: '#935525', color: 'white', border: '1px solid #935525' } }}>
+                        <Typography
+                            className='flex items-center'
+                            sx={{ fontSize: '1.5em', gap: '1em' }}>
 
-                   add to cart <ShoppingCartIcon sx={{fontSize:{lg:'5em', xs:'2em'} }} />
-                   </Typography>
-                </Btn>
+                            add to cart <ShoppingCartIcon sx={{ fontSize: { lg: '2em', xs: '1em' } }} />
+                        </Typography>
+                    </Btn>
                 </Tooltip>
             </Box>
 

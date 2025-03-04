@@ -92,7 +92,7 @@ export default function Navbar() {
                         <Link href='/' color='inherit'>
                             <img
                             className='img'
-                            src="https://res.cloudinary.com/dtilcqpqn/image/upload/v1740830051/vkpejp5cg3gxqi6kgnb8.png"
+                            src="https://res.cloudinary.com/dtilcqpqn/image/upload/v1741088776/jlnajjbmntdrvp1tfat9.png"
                             alt="Moka Coffee eshop logo" style={{width:'75%'}}/>
                         </Link>
                     </Box>

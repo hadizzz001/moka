@@ -91,7 +91,7 @@ const Index = ({data,count}:any) => {
 <meta property="og:title" content="Moka Coffee | Buy tasty coffee in Lebanon" />
 <meta property="og:url" content="https://binmoka.com/" />
 <meta property="og:site_name" content="Moka Coffee" />
-<meta property="og:image" content="https://res.cloudinary.com/dtilcqpqn/image/upload/v1740830051/vkpejp5cg3gxqi6kgnb8.png" />
+<meta property="og:image" content="https://res.cloudinary.com/dtilcqpqn/image/upload/v1741088776/jlnajjbmntdrvp1tfat9.png" />
 {/* <meta property="og:description" content="Moka Coffee provide a wide range of European electronics (stock and new)" /> */}
      
 <meta name="og:description" content={`

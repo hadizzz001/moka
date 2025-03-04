@@ -23,6 +23,8 @@ export const getAll = async (endpoint?: string, limit?: number, category?: strin
   try {
 
     const req = await fetch(`${server}/api/${endpoint ? endpoint : 'home'}?limit=${limit || 100}&category=${category ? category : ''}&search=${search ? search : ''}&skip=${skip}&totalCount=${totalCount === true ? 'true' : 'false'}`)
+    console.log(`${server}/api/${endpoint ? endpoint : 'home'}?limit=${limit || 100}&category=${category ? category : ''}&search=${search ? search : ''}&skip=${skip}&totalCount=${totalCount === true ? 'true' : 'false'}`);
+    
     const res = await req.json()
 
     if (res) {
@@ -80,7 +82,7 @@ export default function Home({ data: staticData, category }: { category: any, da
         <meta property="og:title" content="Moka Coffee Store | Buy tasty coffee in Lebanon" />
         <meta property="og:url" content="https://binmoka.com/" />
         <meta property="og:site_name" content="Moka Coffee Store" />
-        <meta property="og:image" content="https://res.cloudinary.com/dtilcqpqn/image/upload/v1740830051/vkpejp5cg3gxqi6kgnb8.png" />
+        <meta property="og:image" content="https://res.cloudinary.com/dtilcqpqn/image/upload/v1741088776/jlnajjbmntdrvp1tfat9.png" />
         {/* <meta property="og:description" content="Moka Coffee provide a wide range of European electronics (stock and new)" /> */}
 
         <meta name="og:description" content={`

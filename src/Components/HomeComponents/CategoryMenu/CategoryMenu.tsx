@@ -16,7 +16,7 @@ const CategoryMenu = ({category}:{category:string[] | undefined}) => {
             px: '1.25em',
             maxWidth: 'xl'
         }}>
-            {['Coffee','Coffee machine', 'espresso pod', 'Espresso capsules', 'Machine spareparts', 'Discount sales', 'Cold & beverage', 'Tea & leaves'].map((item) => {
+            {['Coffee','Coffee machine', 'espresso pod', 'Espresso capsules', 'Machine spareparts', 'Discount sales', 'Cold and beverage', 'Tea and leaves'].map((item) => {
                 return <Box  sx={{cursor:'pointer'}} key={item} onClick={()=> item !== 'videos' ? 
                 
                 router.push(`/category/${item.replace(/\s+/g, '-')}`) :  router.push(`/videos`)
