@@ -196,17 +196,17 @@ const ProductCard = ({ title, videoUrl, _id, price, images, category, sx, handle
                     width: '100%',
                     // wordBreak:'break-all',
                     mt: '.25em',
-                    fontSize: { lg: '1.5em', xs: '1em' }
+                    fontSize: { lg: '1.5em', xs: '1em' },fontWeight:'900'
                 }}>{title}</Typography>
 
-            <span className='gray' style={{ fontSize: '1em' }}>
+            <span className='gray' style={{ fontSize: '1em',fontWeight:'900' }}>
                 {category}
             </span>
             <Box sx={{ mx: '.15em', justifyContent: 'space-between', display: { xs: 'block' } }} className='flexed'>
                 <Typography
                     className='clr'
                     sx={{
-                        fontSize: { lg: '1.5em', xs: '1em' }
+                        fontSize: { lg: '1.5em', xs: '1em' },fontWeight:'900'
                     }}>${price}</Typography>
                 
             </Box>
@@ -219,7 +219,7 @@ const ProductCard = ({ title, videoUrl, _id, price, images, category, sx, handle
                         sx={{ ':hover': { background: '#935525', color: 'white', border: '1px solid #935525' } }}>
                         <Typography
                             className='flex items-center'
-                            sx={{ fontSize: '1.5em', gap: '1em' }}>
+                            sx={{ fontSize: '1.5em', gap: '1em' , fontWeight:'900'}}>
 
                             add to cart <ShoppingCartIcon sx={{ fontSize: { lg: '2em', xs: '1em' } }} />
                         </Typography>
