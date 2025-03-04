@@ -119,7 +119,7 @@ export default function Checkout() {
     
           // Encode message for WhatsApp
           const encodedMessage = encodeURIComponent(message);
-          const phoneNumber = '96176368475';
+          const phoneNumber = '96171566 680';
           const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     
           // Clear the cart after saving the order
