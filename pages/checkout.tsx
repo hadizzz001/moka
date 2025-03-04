@@ -85,19 +85,51 @@ export default function Checkout() {
           },
           body: JSON.stringify({ order: { info, products, total } })
         });
-  
+    
         // Wait for the server response
         if (!rawResponse.ok) {
           throw new Error('Failed to save the order');
         }
-  
+    
         const content = await rawResponse.json();
-  
-        // Clear the cart after saving the order
-        saveState('usercart', []); // Assuming `saveState` is used to update the local storage or state.
-  
-        // Perform a hard refresh and navigate to '/'
-        window.location.href = '/';
+    
+        // Check if the order was successfully saved
+        if (content.success) {
+          // Construct the WhatsApp message
+          const { firstName, lastName, phone, address1, city } = info;
+          const message = `
+            *Customer Information:*
+            Name: ${firstName} ${lastName}
+            Phone: ${phone}
+            Address: ${address1}, ${city}
+    
+            *Order Details:*
+            ${products.map((item:any, index:any) => `
+              Item ${index + 1}:
+              - Name: ${item.title}
+              - Quantity: ${item.qty}
+              - Price: $${item.price}
+              - Image: ${item.img}
+            `).join('\n')}
+    
+            Subtotal: $${total.toFixed(2)}
+            Delivery fee: $3.00
+            *Total Amount:* $${(total + 3).toFixed(2)}
+          `;
+    
+          // Encode message for WhatsApp
+          const encodedMessage = encodeURIComponent(message);
+          const phoneNumber = '96176368475';
+          const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+          // Clear the cart after saving the order
+          saveState('usercart', []);
+    
+          // Redirect to WhatsApp for order confirmation
+          window.location.href = whatsappLink;
+        } else {
+          alert('Failed to process the order. Please try again.');
+        }
       } catch (error) {
         console.error('Error saving the order:', error);
         alert('Something went wrong while saving the order. Please try again.');
@@ -105,6 +137,7 @@ export default function Checkout() {
     } else {
       alert('Cart or user information is incomplete.');
     }
+    
   };
   
   
