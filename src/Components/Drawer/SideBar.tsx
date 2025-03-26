@@ -77,7 +77,7 @@ export default function TemporaryDrawer({cates}:{cates:string[] | undefined}) {
             </ListItemButton>
           </ListItem>
          }): */}
-       { ['Coffee','Coffee machine', 'espresso pod', 'Espresso capsules', 'Machine spareparts', 'Discount sales', 'Cold and beverage', 'Tea and leaves'].map((text, index) => {
+       { ['Coffee','Coffee machine', 'espresso pod', 'Espresso capsules', 'Machine spareparts', 'Today offer', 'Nescafe and more', 'Nuts and jelly'].map((text, index) => {
           if (!text) return;
           return <ListItem
           onClick={()=> text !== 'videos' ? router.push(`/category/${text}`) : router.push(`${text}`)}
